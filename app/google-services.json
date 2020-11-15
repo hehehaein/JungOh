@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "111327425027",
+    "firebase_url": "https://jungoh-aa0f8.firebaseio.com",
+    "project_id": "jungoh-aa0f8",
+    "storage_bucket": "jungoh-aa0f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111327425027:android:3d358cb77a334c61651436",
+        "android_client_info": {
+          "package_name": "com.example.jung_oh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111327425027-pjtakjh67bs18kmt48kmt35cl7o90g1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiR8SacAo_QENBSsSZ_awt3vHgGgUMUEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111327425027-pjtakjh67bs18kmt48kmt35cl7o90g1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

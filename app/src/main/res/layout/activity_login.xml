@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,16 +10,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".LoginActivity">
+
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:hint="Username"
+        android:hint="email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,10 +41,10 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/Registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -51,12 +53,13 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
         android:enabled="false"
-        android:text="@string/action_sign_in"
+        android:text="Registration"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -75,10 +78,32 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="356dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="363dp" />
+
+    <Button
+        android:id="@+id/FindPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find PW"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/login_google_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayout"
+        android:layout_centerInParent="true"
+        tools:ignore="MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="439dp">
+
+    </com.google.android.gms.common.SignInButton>
 </androidx.constraintlayout.widget.ConstraintLayout>
