@@ -261,6 +261,7 @@
         <enum name="invisible" value="4"/>
         <enum name="gone" value="8"/>
     </attr>
+    <attr format="reference" name="recyclerViewStyle"/>
     <attr format="color" name="rippleColor"/>
     <attr format="color|reference" name="scrimBackground"/>
     <attr format="reference" name="showMotionSpec"/>
@@ -4640,7 +4641,7 @@
     <declare-styleable name="RecyclerView">
         <!-- Class name of the Layout Manager to be used.
         <p/>
-        The class must extandroidx.recyclerview.widget.RecyclerViewView$LayoutManager
+        The class must ext androidx.recyclerview.widget.RecyclerViewView$LayoutManager
         and have either a default constructor or constructor with the signature
         (android.content.Context, android.util.AttributeSet, int, int).
          <p/>
@@ -4656,6 +4657,7 @@
 
         <attr name="android:orientation"/>
         <attr name="android:descendantFocusability"/>
+        <attr name="android:clipToPadding"/>
         <attr format="integer" name="spanCount"/>
         <attr format="boolean" name="reverseLayout"/>
         <attr format="boolean" name="stackFromEnd"/>
