@@ -15,7 +15,8 @@
         android:id="@+id/txtViewname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Name       "
+        app:layout_constraintRight_toLeftOf="@+id/username"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="112dp"
         tools:ignore="MissingConstraints" />
@@ -31,7 +32,6 @@
         android:layout_marginRight="24dp"
         android:hint="홍길동"
         android:inputType="textEmailAddress"
-
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,9 +42,10 @@
         android:id="@+id/txtViewemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Email       "
         tools:layout_editor_absoluteX="35dp"
         tools:layout_editor_absoluteY="165dp"
+        app:layout_constraintRight_toLeftOf="@+id/email"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -68,9 +69,10 @@
         android:id="@+id/txtViewpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="Password       "
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="210dp"
+        app:layout_constraintRight_toLeftOf="@+id/password"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -95,17 +97,19 @@
         android:id="@+id/txtViewcheckpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CheckPwd"
+        android:text="CheckPwd       "
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="271dp"
+        app:layout_constraintRight_toLeftOf="@+id/checkpwd"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txtViewgender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gender"
+        android:text="Gender       "
         tools:ignore="MissingConstraints"
+        app:layout_constraintRight_toLeftOf="@+id/male"
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="334dp" />
 
@@ -165,9 +169,11 @@
         android:id="@+id/male"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Male"
+        android:text="Male      "
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="328dp"
+        app:layout_constraintStart_toStartOf="@+id/checkpwd"
+        app:layout_constraintTop_toBottomOf="@+id/checkpwd"
         tools:ignore="MissingConstraints" />
 
     <CheckBox
@@ -177,6 +183,8 @@
         android:text="Female"
         tools:layout_editor_absoluteX="227dp"
         tools:layout_editor_absoluteY="327dp"
+        app:layout_constraintLeft_toRightOf="@+id/male"
+        app:layout_constraintTop_toBottomOf="@+id/checkpwd"
         tools:ignore="MissingConstraints" />
 
 
