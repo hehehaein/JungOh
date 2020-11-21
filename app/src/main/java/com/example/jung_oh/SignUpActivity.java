@@ -31,12 +31,12 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        username_edit = findViewById(R.id.username);
-        email_edit = findViewById(R.id.email);
-        password_edit = findViewById(R.id.password);
-        checkPWD_edit = findViewById(R.id.checkpwd);
-        register_button = findViewById(R.id.register_button);
-        findViewById(R.id.register_button).setOnClickListener(onClickListener);
+        username_edit = findViewById(R.id.inputName);
+        email_edit = findViewById(R.id.inputEmailCheck);
+        password_edit = findViewById(R.id.inputPassword);
+        checkPWD_edit = findViewById(R.id.inputPasswordConfirm);
+        register_button = findViewById(R.id.signupedButton);
+        findViewById(R.id.signupedButton).setOnClickListener(onClickListener);
         firebaseAuth = FirebaseAuth.getInstance();
     }
     View.OnClickListener onClickListener = new View.OnClickListener(){
@@ -45,13 +45,13 @@ public class SignUpActivity extends AppCompatActivity {
         public void onClick(View view) {
 
             switch(view.getId()){
-                case R.id.register_button:
+                case R.id.signupedButton:
                     signUp();
                     break;
             }
         }
     };
-    public void onCheckBoxClicked(View view){
+   /* public void onCheckBoxClicked(View view){
         boolean checked = ((CheckBox) View).isChecked();
         switch(view.getId()){
             case R.id.male:
@@ -63,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Female", Toast.LENGTH_SHORT).show();
                 break;
         }
-    }
+    }*/
     private void signUp(){
         String name = username_edit.getText().toString().trim();
         String email = email_edit.getText().toString().trim();

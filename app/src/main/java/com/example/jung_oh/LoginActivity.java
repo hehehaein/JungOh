@@ -34,9 +34,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        findViewById(R.id.signUp).setOnClickListener(onClickListener);
-        findViewById(R.id.Registration).setOnClickListener(onClickListener);
-        findViewById(R.id.FindPW).setOnClickListener(onClickListener);
+        findViewById(R.id.login_loginButton).setOnClickListener(onClickListener);
+        findViewById(R.id.login_signupButton).setOnClickListener(onClickListener);
+        findViewById(R.id.login_findPwBtn).setOnClickListener(onClickListener);
         com.google.android.gms.common.SignInButton login_with_google_imgbtn = findViewById(R.id.login_google_btn);
         firebaseAuth = firebaseAuth.getInstance();
 
@@ -89,22 +89,22 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch(v.getId()){
-                case R.id.Registration:
+                case R.id.login_signupButton:
                     myStartActivity(SignUpActivity.class);
                     break;
 
-                case R.id.signUp:
+                case R.id.login_loginButton:
                     login();
                     break;
-                case R.id.FindPW:
+                case R.id.login_findPwBtn:
                   //  myStartActivity(FindPasswordActivity.class);
                     break;
             }
         }
     };
     private void login(){
-        String email = ((EditText)findViewById(R.id.email)).getText().toString().trim();
-        String password = ((EditText)findViewById(R.id.password)).getText().toString().trim();
+        String email = ((EditText)findViewById(R.id.login_email)).getText().toString().trim();
+        String password = ((EditText)findViewById(R.id.login_password)).getText().toString().trim();
 
         if(email.length() >0 && password.length() >0){
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
