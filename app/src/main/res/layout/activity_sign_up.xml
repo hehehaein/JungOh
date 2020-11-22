@@ -4,17 +4,26 @@
     android:layout_height="match_parent"
     android:background="#00ff0000">
 
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/sun"/>
+
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/cloud" />
+
 
 
     <LinearLayout
         android:id="@+id/signup_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center">
@@ -33,16 +42,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/signup_toolbar"
         android:layout_alignLeft="@+id/inputName"
-        android:layout_marginTop="20dp"
-        android:text="이름"
+        android:layout_marginTop="15dp"
+        android:text="Name"
         android:textSize="15dp" />
 
     <EditText
         android:id="@+id/inputName"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/textName"
         android:inputType="textPersonName"
+        android:hint="이름을 입력하세요"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -51,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/inputName"
         android:layout_alignLeft="@+id/inputName"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="Email"
         android:textSize="15dp" />
 
@@ -59,7 +69,7 @@
     <EditText
         android:id="@+id/inputEmailCheck"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/textEmailCheck"
         android:layout_alignLeft="@+id/textEmailCheck"
         android:hint="이메일을 입력하세요"
@@ -72,16 +82,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/inputEmailCheck"
         android:layout_alignLeft="@+id/inputEmailCheck"
-        android:layout_marginTop="20dp"
-        android:text="비밀번호"
+        android:layout_marginTop="15dp"
+        android:text="password"
         android:textSize="15dp" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/textPassword"
         android:inputType="textPassword"
+        android:hint="비밀번호를 입력하세요"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -90,18 +101,43 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/inputPassword"
         android:layout_alignLeft="@+id/inputPassword"
-        android:layout_marginTop="20dp"
-        android:text="비밀번호 확인"
+        android:layout_marginTop="15dp"
+        android:text="check P/W"
         android:textSize="15dp" />
 
     <EditText
         android:id="@+id/inputPasswordConfirm"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/textPasswordConfirm"
         android:inputType="textPassword"
+        android:hint="비밀번호를 한 번 더 입력하세요"
         android:layout_centerHorizontal="true" />
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/inputPasswordConfirm"
+        android:layout_alignLeft="@+id/inputPasswordConfirm">
+
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male"
+            />
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Female"/>
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/signupedButton"
@@ -112,6 +148,13 @@
         android:layout_centerHorizontal="true"
         android:text="assign"
         android:textSize="25dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/login_field" />
 
 </RelativeLayout>
 

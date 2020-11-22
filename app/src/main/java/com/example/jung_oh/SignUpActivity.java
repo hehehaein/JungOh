@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +28,8 @@ public class SignUpActivity extends AppCompatActivity {
     private boolean isChanged = false;
     private boolean isCompleted = false;
     private Object View;
+    private RadioButton Male_btn, Female_btn;
+    private RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +43,32 @@ public class SignUpActivity extends AppCompatActivity {
         register_button = findViewById(R.id.signupedButton);
         findViewById(R.id.signupedButton).setOnClickListener(onClickListener);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        Male_btn=(RadioButton)findViewById(R.id.Male);
+        Female_btn=(RadioButton)findViewById(R.id.Female);
+        Male_btn.setOnClickListener(radioButtonClickListener);
+        Female_btn.setOnClickListener(radioButtonClickListener);
+        radioGroup=(RadioGroup)findViewById(R.id.radioGroup);
+        radioGroup.setOnCheckedChangeListener(radioGroupButtonchangeListener);
+
     }
+    RadioButton.OnClickListener radioButtonClickListener = new RadioButton.OnClickListener(){
+        @Override
+        public void onClick(android.view.View v) {
+            Toast.makeText(SignUpActivity.this,"Male: "+Male_btn.isChecked() +" Female: "+Female_btn.isChecked(),Toast.LENGTH_SHORT).show();
+        }
+    };
+    RadioGroup.OnCheckedChangeListener radioGroupButtonchangeListener = new RadioGroup.OnCheckedChangeListener(){
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, @IdRes int i) {
+            if(i==R.id.Male){
+                Toast.makeText(SignUpActivity.this,"Male",Toast.LENGTH_SHORT).show();
+            }else if(i==R.id.Female){
+                Toast.makeText(SignUpActivity.this,"Female",Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
     View.OnClickListener onClickListener = new View.OnClickListener(){
 
         @Override
@@ -51,26 +81,14 @@ public class SignUpActivity extends AppCompatActivity {
             }
         }
     };
-   /* public void onCheckBoxClicked(View view){
-        boolean checked = ((CheckBox) View).isChecked();
-        switch(view.getId()){
-            case R.id.male:
-                if(checked)
-                    Toast.makeText(getApplicationContext(), "Male", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.female:
-                if(checked)
-                    Toast.makeText(getApplicationContext(), "Female", Toast.LENGTH_SHORT).show();
-                break;
-        }
-    }*/
+
     private void signUp(){
         String name = username_edit.getText().toString().trim();
         String email = email_edit.getText().toString().trim();
         String password = password_edit.getText().toString().trim();
         String passwordCheck = checkPWD_edit.getText().toString().trim();
 
-        if(name.length() > 0 && email.length() >0 && password.length() >0 && passwordCheck.length()>0 && isChanged){
+        if(name.length() > 0 && email.length() >0 && password.length() >0 && passwordCheck.length()>0){
             isCompleted = true;
         }
         if(isCompleted){

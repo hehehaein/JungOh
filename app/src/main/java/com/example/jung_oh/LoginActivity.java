@@ -3,6 +3,7 @@ package com.example.jung_oh;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,9 +27,6 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity {
     private String TAG = "LoginActivity";
     private FirebaseAuth firebaseAuth;
-    private static final int RC_SIGN_IN = 900;
-    private GoogleSignInClient mGoogleSignInClient;
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -37,53 +35,13 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.login_loginButton).setOnClickListener(onClickListener);
         findViewById(R.id.login_signupButton).setOnClickListener(onClickListener);
         findViewById(R.id.login_findPwBtn).setOnClickListener(onClickListener);
-        com.google.android.gms.common.SignInButton login_with_google_imgbtn = findViewById(R.id.login_google_btn);
+
         firebaseAuth = firebaseAuth.getInstance();
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this,gso);
-        login_with_google_imgbtn.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-                startActivityForResult(signInIntent, RC_SIGN_IN);
-            }
-        });
 
     }
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == RC_SIGN_IN){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try{
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                startToast("로그인 성공");
-                firebaseAuthWithGoogle(account.getIdToken());
 
-            }catch(ApiException e){
-                startToast("로그인 실패");
-            }
-        }
-    }
-    private void firebaseAuthWithGoogle(String idToken){
-        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
-        firebaseAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    startToast("로그인 성공");
-                    myStartActivity(MainActivity.class);
-                }else{
-                    startToast("로그인 실패");
-                }
 
-            }
-        });
-
-    }
     View.OnClickListener onClickListener = new View.OnClickListener(){
 
         @Override
@@ -97,8 +55,10 @@ public class LoginActivity extends AppCompatActivity {
                     login();
                     break;
                 case R.id.login_findPwBtn:
-                  //  myStartActivity(FindPasswordActivity.class);
+                    myStartActivity(FindPasswordActivity.class);
                     break;
+
+
             }
         }
     };

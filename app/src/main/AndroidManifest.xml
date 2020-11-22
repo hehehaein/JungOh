@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WeatherActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,24 +23,22 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/MyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-            android:label="@string/title_activity_login" />
+        android:label="@string/title_activity_login" />
         <activity
             android:name=".SignUpActivity"
             tools:ignore="Instantiatable"
             android:theme="@style/MyTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".FindPasswordActivity" />
+        <activity
+            android:name=".FindPasswordActivity"
+            android:theme="@style/MyTheme"/>
+        <activity android:name=".WeatherActivity">
+
+        </activity>
+
+
     </application>
 
 </manifest>

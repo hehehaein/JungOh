@@ -1254,7 +1254,9 @@ drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
+id Female
 id META
+id Male
 id NO_DEBUG
 id SHIFT
 id SHOW_ALL
@@ -1395,6 +1397,11 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id findPwEmail
+id findPwEmailText
+id findPwName
+id findPwNameText
+id findPwOkBtn
 id fixed
 id flip
 id forever
@@ -1443,7 +1450,6 @@ id list_item
 id login_email
 id login_findPW_txt
 id login_findPwBtn
-id login_google_btn
 id login_loginButton
 id login_password
 id login_signupButton
@@ -1481,6 +1487,7 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
+id radioGroup
 id ratio
 id rectangles
 id reverseSawtooth
@@ -1644,9 +1651,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_find_password
 layout activity_login
 layout activity_main
 layout activity_sign_up
+layout activity_splash
 layout activity_weather
 layout custom_dialog
 layout design_bottom_navigation_item
