@@ -1185,6 +1185,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable camera_button
 drawable cloud
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1307,6 +1308,7 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id alertDialogItemTextView
 id alertTitle
 id aligned
 id all
@@ -1326,6 +1328,12 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_Accessary
+id btn_Bottom
+id btn_Outer
+id btn_Top
+id btn_assign
+id btn_photo
 id button
 id buttonPanel
 id cache_measures
@@ -1417,6 +1425,7 @@ id invisible
 id italic
 id item_textview
 id item_touch_helper_previous_elevation
+id iv_photo
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -1429,7 +1438,9 @@ id line3
 id linear
 id linearlayout
 id listMode
+id list_closet
 id list_item
+id list_view_alert_dialog_list
 id loading
 id login_google_btn
 id main_listview
@@ -1633,10 +1644,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_clothes
+layout activity_closet_card_view
 layout activity_login
 layout activity_main
 layout activity_sign_up
 layout activity_weather
+layout closet_card_view_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2350,3 +2364,4 @@ styleable Variant constraints region_heightLessThan region_heightMoreThan region
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_paths
