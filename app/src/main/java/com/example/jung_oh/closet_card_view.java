@@ -30,6 +30,7 @@ public class closet_card_view extends AppCompatActivity {
         final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_single_choice, array);
         // listview 생성 및 adapter 지정.
         final ListView listview = (ListView) findViewById(R.id.list_view_alert_dialog_list);
+        listview.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         listview.setAdapter(adapter);
         //리스트 선택 가능하게 만들어줌
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -42,5 +43,6 @@ public class closet_card_view extends AppCompatActivity {
                 // TODO : use strText
             }
         });
+
     }
 }

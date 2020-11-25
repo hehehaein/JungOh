@@ -1221,6 +1221,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon
+drawable login_field
+drawable login_sun
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1306,6 +1308,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_clothes_toolbar
 id adjust_height
 id adjust_width
 id alertDialogItemTextView
@@ -1396,6 +1399,11 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id findPwEmail
+id findPwEmailText
+id findPwName
+id findPwNameText
+id findPwOkBtn
 id fixed
 id flip
 id forever
@@ -1513,6 +1521,7 @@ id showCustom
 id showHome
 id showTitle
 id signUp
+id signup_toolbar
 id sin
 id smallLabel
 id snackbar_action
@@ -1646,9 +1655,11 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_clothes
 layout activity_closet_card_view
+layout activity_find_password
 layout activity_login
 layout activity_main
 layout activity_sign_up
+layout activity_splash
 layout activity_weather
 layout closet_card_view_row
 layout custom_dialog
@@ -1710,8 +1721,10 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_sign_in
 string action_sign_in_short
+string add_closet
 string app_name
 string appbar_scrolling_view_behavior
+string assign
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
