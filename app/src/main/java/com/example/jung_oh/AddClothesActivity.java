@@ -26,6 +26,8 @@ import androidx.core.content.FileProvider;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -253,13 +255,15 @@ public class AddClothesActivity extends AppCompatActivity {
             progressDialog.show();
 
             //storage
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             FirebaseStorage storage = FirebaseStorage.getInstance();
             //Unique한 파일명을 만들자.
             SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMHH_mmss");
             Date now = new Date();
             String filename = formatter.format(now) + ".png";
             //storage 주소와 폴더 파일명을 지정해 준다.
-            StorageReference storageRef = storage.getReference("images/" + filename);
+            String uid = user.getUid();
+            StorageReference storageRef = storage.getReference( uid + "/" + filename);
             //StorageReference imagesRef = storageRef.child("images");
             //올라가거라...
             UploadTask uploadTask = storageRef.putFile(filePath);
