@@ -261,9 +261,23 @@ public class AddClothesActivity extends AppCompatActivity {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMHH_mmss");
             Date now = new Date();
             String filename = formatter.format(now) + ".png";
+            StorageReference storageRef;
             //storage 주소와 폴더 파일명을 지정해 준다.
-            String uid = user.getUid();
-            StorageReference storageRef = storage.getReference( uid + "/" + filename);
+            String uid = user.getEmail();
+            String cloth_type = closet_card_view.strText;
+            Toast.makeText(getApplicationContext(), cloth_type, Toast.LENGTH_SHORT).show();
+            if(cloth_type.equals("muffler") || cloth_type.equals("strawHat") || cloth_type.equals("packpack") || cloth_type.equals("bucketHat") || cloth_type.equals("beret") ||
+                    cloth_type.equals("cap") || cloth_type.equals("beanie") || cloth_type.equals("sunglasses") || cloth_type.equals("scarf" ) || cloth_type.equals("glasses")
+                    || cloth_type.equals("parasol") || cloth_type.equals("ecobag") || cloth_type.equals("rainCoat" )|| cloth_type.equals("umbrella") || cloth_type.equals("gloves")
+                    || cloth_type.equals("rainBoots") || cloth_type.equals("crossBag") || cloth_type.equals("bigBag") || cloth_type.equals("woolenHat"))
+                    {storageRef = storage.getReference( uid + "/Accessary/" + filename);}
+            else if(cloth_type.equals("longSleve") || cloth_type.equals("sleeveless") || cloth_type.equals("mentomen") || cloth_type.equals("Tshirt") ||
+                    cloth_type.equals("bluse") || cloth_type.equals("shirt") || cloth_type.equals("anorak") || cloth_type.equals("onePiece") || cloth_type.equals("hoodT"))
+                    {storageRef = storage.getReference( uid + "/Top/" + filename);}
+            else if(cloth_type.equals("trouser") || cloth_type.equals("longSkirt") || cloth_type.equals("pants") || cloth_type.equals("slacks") || cloth_type.equals("widePants")||
+                    cloth_type.equals("jeans") || cloth_type.equals("skirt") || cloth_type.equals("trainingPants") || cloth_type.equals("trainingSuit"))
+                    {storageRef = storage.getReference( uid + "/Bottom/" + filename);}
+            else {storageRef = storage.getReference( uid + "/Outer/" + filename);}
             //StorageReference imagesRef = storageRef.child("images");
             //올라가거라...
             UploadTask uploadTask = storageRef.putFile(filePath);

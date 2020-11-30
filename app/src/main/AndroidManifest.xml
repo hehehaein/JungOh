@@ -38,14 +38,9 @@
         <activity
             android:theme="@style/MyTheme"
             android:name=".LoginActivity">
-        </activity> android:label="@string/title_activity_login" />
+        </activity><![CDATA[ android:label="@string/title_activity_login" />
 
-        <activity
-            android:theme="@style/MyTheme"
-            android:name=".SignUpActivity"
-            tools:ignore="Instantiatable">
-        </activity>
-
+        ]]>
         <activity
             android:theme="@style/MyTheme"
             android:name=".FindPasswordActivity"/>
@@ -63,8 +58,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
+        <activity android:name=".SignUpActivity">
+            tools:ignore="Instantiatable"
+            android:theme="@style/MyTheme"/>
+        </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.jung_oh.FileProvider"

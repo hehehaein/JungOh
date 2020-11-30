@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 public class closet_card_view extends AppCompatActivity {
 
+    static String strText;
     static final String[] OUTER_LIST = {"cardigan", "leaderJacket", "lightweightPadding", "longPadding", "mustang", "windBreaker", "bbogul", "bbogulVest",
             "shirt", "yasang", "woolenCoat", "jacket", "jersey", "denimJacket", "coat", "trenchCoat", "padding", "paddingVest",
             "paddingCoat", "flightJacket", "hoodZipup"};
@@ -22,7 +23,7 @@ public class closet_card_view extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_closet_card_view);
-        ListView list = findViewById(R.id.list_view_alert_dialog_list);
+        //ListView list = findViewById(R.id.list_view_alert_dialog_list);
 
         Intent intent = getIntent();
         String[] array = intent.getExtras().getStringArray(Intent.EXTRA_TEXT);
@@ -38,7 +39,7 @@ public class closet_card_view extends AppCompatActivity {
             public void onItemClick(AdapterView parent, View v, int position, long id) {
 
                 // get TextView's Text.
-                String strText = (String) parent.getItemAtPosition(position);
+               strText = (String) parent.getItemAtPosition(position);
 
                 // TODO : use strText
             }
