@@ -46,13 +46,11 @@
             android:name=".FindPasswordActivity"/>
 
         <activity android:name=".closet_card_view">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".AddClothesActivity">
+        <activity
+            android:theme="@style/MyTheme"
+            android:name=".AddClothesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

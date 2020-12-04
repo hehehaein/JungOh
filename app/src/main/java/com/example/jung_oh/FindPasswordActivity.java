@@ -17,6 +17,7 @@ public class FindPasswordActivity extends AppCompatActivity {
     private String TAG = "FindPasswordActivity";
 
     private FirebaseAuth firebaseAuth;
+    private BackPressHandler backPressHandler = new BackPressHandler(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,11 @@ public class FindPasswordActivity extends AppCompatActivity {
             }
         }
     };
+    public void onBackPressed(){
+
+        backPressHandler.onBackPressed("종료하려면 뒤로가기 버튼을 한번 더 누르세요", 3000);
+
+    }
 
     private void send() {
         String email = ((EditText) findViewById(R.id.findPwEmail)).getText().toString().trim();

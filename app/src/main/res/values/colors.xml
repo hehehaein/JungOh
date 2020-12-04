@@ -9,8 +9,5 @@
     <color name="partition">#000000</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="app_color_start">#56BC8D</color>
-    <color name="app_color_center">#56BC8D</color>
-    <color name="app_color_end">#56BC8D</color>
-    <color name="bbobki_text">#F74C17</color>
+    <color name="green">#56BC8D</color>
 </resources>

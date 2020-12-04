@@ -147,11 +147,13 @@
         android:layout_below="@+id/inputPasswordConfirm"
         android:layout_centerHorizontal="true"
         android:text="assign"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:background="@color/green"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/signupedButton"
         android:layout_alignParentBottom="true"
         android:scaleType="fitEnd"
         android:src="@drawable/login_field" />

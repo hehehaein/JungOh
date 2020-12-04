@@ -27,6 +27,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity {
     private String TAG = "LoginActivity";
     private FirebaseAuth firebaseAuth;
+    private BackPressHandler backPressHandler = new BackPressHandler(this);
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -62,6 +63,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     };
+    @Override
+    public void onBackPressed(){
+
+        backPressHandler.onBackPressed("종료하려면 뒤로가기 버튼을 한번 더 누르세요", 3000);
+
+    }
     private void login(){
         String email = ((EditText)findViewById(R.id.login_email)).getText().toString().trim();
         String password = ((EditText)findViewById(R.id.login_password)).getText().toString().trim();

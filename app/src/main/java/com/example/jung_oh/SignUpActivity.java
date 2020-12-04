@@ -30,6 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
     private Object View;
     private RadioButton Male_btn, Female_btn;
     private RadioGroup radioGroup;
+    private BackPressHandler backPressHandler = new BackPressHandler(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,11 @@ public class SignUpActivity extends AppCompatActivity {
             }
         }
     };
+    public void onBackPressed(){
+
+        backPressHandler.onBackPressed("종료하려면 뒤로가기 버튼을 한번 더 누르세요", 3000);
+
+    }
 
     private void signUp(){
         String name = username_edit.getText().toString().trim();

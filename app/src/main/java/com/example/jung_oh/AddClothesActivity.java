@@ -12,20 +12,26 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
@@ -38,13 +44,18 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 public class AddClothesActivity extends AppCompatActivity {
 
     //카메라 권한 체크 후 권한 결정
     final private static String TAG = "Hyein";
+    private FirebaseAuth firebaseAuth;
+    TextView text;
 
     //썸네일 사진 요청변수
     private static final int REQUEST_IMAGE_CAPTURE = 1;
+
+
 
     Button btn_photo;
     ImageView iv_photo;
@@ -53,6 +64,12 @@ public class AddClothesActivity extends AppCompatActivity {
     Button btn_Bottom;
     Button btn_Top;
     Button btn_Accessary;
+
+
+    NavigationView navigationView;
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle barDrawerToggle;
+    private BackPressHandler backPressHandler = new BackPressHandler(this);
 
     //옷 종류 선택 리스트
     static final String[] CLOSET_MENU = {"Outer", "Top", "Bottom", "Accessary"};
@@ -79,6 +96,54 @@ public class AddClothesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_clothes);
+        navigationView=findViewById(R.id.nav);
+        drawerLayout=findViewById(R.id.add_clothes);
+        findViewById(R.id.logout).setOnClickListener(onClickListener);
+
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId()){
+                    case R.id.menu_home:
+                        myStartActivity(MainActivity.class);//고쳐야함
+                        finish();
+                        break;
+
+                    case R.id.menu_addClothes:
+                        myStartActivity(AddClothesActivity.class);
+                        finish();
+                        break;
+
+                    case R.id.menu_myPage:
+                        myStartActivity(MyCloset.class);
+                        finish();
+                        break;
+                }
+                drawerLayout.closeDrawer(navigationView);
+                return false;
+            }
+        });
+
+
+
+
+        Button buttonOpen= (Button)findViewById(R.id.open_button);
+        buttonOpen.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.add_clothes) ;
+                if (!drawer.isDrawerOpen(Gravity.LEFT)) {
+                    drawer.openDrawer(Gravity.LEFT) ;
+                }
+            }
+        });
+
+
+
 
         iv_photo = findViewById(R.id.iv_photo);
         btn_photo = findViewById(R.id.btn_photo);
@@ -171,6 +236,32 @@ public class AddClothesActivity extends AppCompatActivity {
             }
         });
     }
+    public void onBackPressed(){
+
+        backPressHandler.onBackPressed("종료하려면 뒤로가기 버튼을 한번 더 누르세요", 3000);
+
+    }
+    private void myStartActivity(Class c){
+        Intent intent = new Intent(this, c);
+        startActivity(intent);
+    }
+    View.OnClickListener onClickListener = new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            switch(v.getId()){
+                case R.id.logout:
+                    firebaseAuth.getInstance().signOut();
+                    myStartActivity(LoginActivity.class);
+                    finish();
+                    break;
+
+
+            }
+        }
+    };
+
+
     //옷 종류 세부사항 고르는 화면 전환
     private void showAlertDialog(final String[] text){
         Intent intent = new Intent(getApplicationContext(), closet_card_view.class);
@@ -310,6 +401,9 @@ public class AddClothesActivity extends AppCompatActivity {
         } else {
             Toast.makeText(getApplicationContext(), "파일을 먼저 선택하세요.", Toast.LENGTH_SHORT).show();
         }
+
+
+
     }
 
 

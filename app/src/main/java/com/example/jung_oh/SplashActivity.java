@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SplashActivity extends Activity {
     private final int SPLASH_DISPLAY_LENGTH=1000;
+    private BackPressHandler backPressHandler = new BackPressHandler(this);
     @Override
     public void onCreate(Bundle icicle) {
 
@@ -36,5 +37,10 @@ public class SplashActivity extends Activity {
 
             }
         },SPLASH_DISPLAY_LENGTH);
+    }
+    public void onBackPressed(){
+
+        backPressHandler.onBackPressed("종료하려면 뒤로가기 버튼을 한번 더 누르세요", 3000);
+
     }
 }
