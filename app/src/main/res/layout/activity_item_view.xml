@@ -12,6 +12,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         tools:ignore="MissingConstraints">
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

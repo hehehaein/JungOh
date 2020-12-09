@@ -1,11 +1,14 @@
 package com.example.jung_oh;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,26 +35,86 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyCloset extends AppCompatActivity{
+public class MyCloset extends AppCompatActivity {
+    //소이꺼
     RecyclerView recyclerView;
     List<List_data> dataList;
     DatabaseReference databaseReference;
-    HelperAdapter helperAdapter;
-    String email = ((EditText)findViewById(R.id.login_email)).getText().toString().trim();
+    //HelperAdapter helperAdapter;
+    String email = ((EditText) findViewById(R.id.login_email)).getText().toString().trim();
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle barDrawerToggle;
     private FirebaseAuth firebaseAuth;
     private BackPressHandler backPressHandler = new BackPressHandler(this);
 
-
+    private RecyclerView recyclerView1;
+    private FirebaseDatabase database;
+    private List<VerticalData> data = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_closet);
+        database = FirebaseDatabase.getInstance();
+
+
+        // RecyclerView binding
+        recyclerView1 = (RecyclerView) findViewById(R.id.Outer_list);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this));
+        final RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter();
+        recyclerView1.setAdapter(recyclerViewAdapter);
+        database.getReference().child("User").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                data.clear();
+                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                    VerticalData verticalData = snapshot1.getValue(VerticalData.class);
+                    data.add(verticalData);
+                }
+                recyclerViewAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+    class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+        @NonNull
+        @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_list_item, parent, false);
+            return new CustomViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+            Glide.with(holder.itemView.getContext()).load(data.get(position).imageURL).into(((CustomViewHolder)holder).imageView);
+        }
+
+        @Override
+        public int getItemCount() {
+            return data.size();
+        }
+
+        private class CustomViewHolder extends RecyclerView.ViewHolder {
+            ImageView imageView;
+
+            public CustomViewHolder(View view) {
+                super(view);
+                imageView = (ImageView) view.findViewById(R.id.picture_inmycloset);
+            }
+        }
+    }
+}
+
+        //소이꺼
+        /*setContentView(R.layout.activity_my_closet);
         findViewById(R.id.Add_Button).setOnClickListener(onClickListener);
         findViewById(R.id.logout).setOnClickListener(onClickListener);
         navigationView=findViewById(R.id.nav);
@@ -117,5 +180,4 @@ public class MyCloset extends AppCompatActivity{
     private void myStartActivity(Class c){
         Intent intent = new Intent(this, c);
         startActivity(intent);
-    }
-}
+    }*/

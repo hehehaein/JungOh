@@ -89,15 +89,12 @@
             android:background="@drawable/closet_bar"
             android:layout_below="@id/cloud"/>
 
-        <ImageView
-            android:id="@+id/Outer_back"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Outer_list"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@id/Outer_text"
             android:src="@drawable/closet_back"/>
-
-
-
 
 
         <TextView
@@ -111,10 +108,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/closet_bar"
-            android:layout_below="@id/Outer_back"/>
+            android:layout_below="@id/Outer_list"/>
 
-        <ImageView
-            android:id="@+id/Top_back"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Top_list"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@id/Top_text"
@@ -132,10 +129,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/closet_bar"
-            android:layout_below="@id/Top_back"/>
+            android:layout_below="@id/Top_list"/>
 
-        <ImageView
-            android:id="@+id/Bottom_back"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Bottom_list"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@id/Bottom_text"
@@ -154,10 +151,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/closet_bar"
-            android:layout_below="@id/Bottom_back"/>
+            android:layout_below="@id/Bottom_list"/>
 
-        <ImageView
-            android:id="@+id/Accessary_back"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Accessary_list"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@id/Accessary_text"

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\75481e4f325e3678b01ca7833508255c\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\0b21dcae25138a0652514d90f9c61b7a\material-1.3.0-alpha04\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\e9a7396e1444c212720c909ece4c39d7\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
@@ -81,22 +81,22 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\82103\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\57b5ae7b4c1e8222c5e1793edd39aefa\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.1.0] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\3c410805b211f565ddf8d6b49f7dd616\jetified-protolite-well-known-types-17.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\47a9b793fb482438f4facbefe890c2a3\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
-INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
+INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
 	package
 		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:4:5-34
 		INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-76:12
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:2:11-69
@@ -165,7 +165,7 @@ ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:13:9-47
 application
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:18:5-73:19
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:18:5-81:19
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\0b21dcae25138a0652514d90f9c61b7a\material-1.3.0-alpha04\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\0b21dcae25138a0652514d90f9c61b7a\material-1.3.0-alpha04\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\82103\.gradle\caches\transforms-2\files-2.1\e9a7396e1444c212720c909ece4c39d7\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -265,43 +265,51 @@ ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:40:13-42
 activity#com.example.jung_oh.FindPasswordActivity
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:44:9-46:51
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:43:9-45:51
 	android:theme
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:45:13-43
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:44:13-43
 	android:name
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:46:13-49
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:45:13-49
 activity#com.example.jung_oh.closet_card_view
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:48:9-50:20
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:47:9-49:20
 	android:name
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:48:19-51
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:47:19-51
 activity#com.example.jung_oh.AddClothesActivity
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:51:9-59:20
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:50:9-58:20
 	android:label
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:52:13-35
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:51:13-35
 	android:theme
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:53:13-43
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:52:13-43
 	android:name
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:54:13-47
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:53:13-47
 activity#com.example.jung_oh.SignUpActivity
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:60:9-63:20
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:59:9-62:20
 	android:name
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:60:19-49
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:59:19-49
+activity#com.example.jung_oh.MyCloset
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:63:9-71:20
+	android:label
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:64:13-35
+	android:theme
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:65:13-43
+	android:name
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:66:13-37
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:64:9-72:20
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:72:9-80:20
 	android:grantUriPermissions
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:68:13-47
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:76:13-47
 	android:authorities
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:66:13-67
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:74:13-67
 	android:exported
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:67:13-37
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:75:13-37
 	android:name
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:65:13-62
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:73:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:69:13-71:54
+ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:77:13-79:54
 	android:resource
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:71:17-51
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:79:17-51
 	android:name
-		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:70:17-67
+		ADDED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml:78:17-67
 uses-sdk
 INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\82103\AndroidStudioProjects\JungOh\app\src\main\AndroidManifest.xml

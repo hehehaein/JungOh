@@ -1740,12 +1740,12 @@ drawable title
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
-id Accessary_back
+id Accessary_list
 id Accessary_text
 id Add_Button
 id BOTTOM_END
 id BOTTOM_START
-id Bottom_back
+id Bottom_list
 id Bottom_text
 id CTRL
 id FUNCTION
@@ -1754,7 +1754,7 @@ id ImageNameTextView
 id META
 id Male
 id NO_DEBUG
-id Outer_back
+id Outer_list
 id Outer_text
 id SHIFT
 id SHOW_ALL
@@ -1763,7 +1763,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id Top_back
+id Top_list
 id Top_text
 id accelerate
 id accessibility_action_clickable_span

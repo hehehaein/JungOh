@@ -47,9 +47,6 @@
             android:name="com.example.jung_oh.LoginActivity"
             android:theme="@style/MyTheme" >
         </activity>
-<![CDATA[ android:label="@string/title_activity_login" />
-
-        ]]>
         <activity
             android:name="com.example.jung_oh.FindPasswordActivity"
             android:theme="@style/MyTheme" />
@@ -68,6 +65,16 @@
         <activity android:name="com.example.jung_oh.SignUpActivity" >
             tools:ignore="Instantiatable"
             android:theme="@style/MyTheme"/>
+        </activity>
+        <activity
+            android:name="com.example.jung_oh.MyCloset"
+            android:label="JungOh"
+            android:theme="@style/MyTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <provider

@@ -1739,12 +1739,12 @@ int drawable title 0x7f0700ba
 int drawable tooltip_frame_dark 0x7f0700bb
 int drawable tooltip_frame_light 0x7f0700bc
 int id ALT 0x7f080000
-int id Accessary_back 0x7f080001
+int id Accessary_list 0x7f080001
 int id Accessary_text 0x7f080002
 int id Add_Button 0x7f080003
 int id BOTTOM_END 0x7f080004
 int id BOTTOM_START 0x7f080005
-int id Bottom_back 0x7f080006
+int id Bottom_list 0x7f080006
 int id Bottom_text 0x7f080007
 int id CTRL 0x7f080008
 int id FUNCTION 0x7f080009
@@ -1753,7 +1753,7 @@ int id ImageNameTextView 0x7f08000b
 int id META 0x7f08000c
 int id Male 0x7f08000d
 int id NO_DEBUG 0x7f08000e
-int id Outer_back 0x7f08000f
+int id Outer_list 0x7f08000f
 int id Outer_text 0x7f080010
 int id SHIFT 0x7f080011
 int id SHOW_ALL 0x7f080012
@@ -1762,7 +1762,7 @@ int id SHOW_PROGRESS 0x7f080014
 int id SYM 0x7f080015
 int id TOP_END 0x7f080016
 int id TOP_START 0x7f080017
-int id Top_back 0x7f080018
+int id Top_list 0x7f080018
 int id Top_text 0x7f080019
 int id accelerate 0x7f08001a
 int id accessibility_action_clickable_span 0x7f08001b

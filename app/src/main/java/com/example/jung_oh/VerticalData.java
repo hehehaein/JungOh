@@ -8,10 +8,7 @@ import android.net.Uri;
 
 //item레이아웃에 들어갈 데이터 : image
 public class VerticalData {
-    private String img;
-    public VerticalData(){}
-    public String getImg(){
-        return img;
-    }
-    //public void setImg(String img){this.img = img;}
+    public String email;
+    public String imageURL;
+    public String type;
 }
