@@ -24,7 +24,7 @@ public class HelperAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_display_images, parent, false);
         ViewHolderClass viewHolderClass = new ViewHolderClass(view);
         return viewHolderClass;
     }

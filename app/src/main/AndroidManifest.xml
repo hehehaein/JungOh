@@ -49,6 +49,7 @@
 
         </activity>
         <activity
+            android:label="JungOh"
             android:theme="@style/MyTheme"
             android:name=".AddClothesActivity">
             <intent-filter>
